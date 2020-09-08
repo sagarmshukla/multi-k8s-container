@@ -16,3 +16,9 @@ before_install:
 
 script:
   - docker run sagarmshukla/react-test npm test -- --coverage
+
+  after_success:
+  
+  deploy:
+    on:
+      branch: master
